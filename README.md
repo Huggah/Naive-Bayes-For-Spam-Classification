@@ -8,3 +8,6 @@ Bayes Theorem uses prior knowledge along with collected data to compute the prob
 In the case of spam classification, we want to find the frequency of words that are spam and the frequency of all words regardless, and we normalize them to get probabilities, ending up with P(words|spam) and P(words). We can use the probability that any given email is spam as our prior, P(spam), and use a derivation of Bayes Theorem to finding the probability that some given words is spam, finding the joint likelihood and marginal of B for every word.
 
 ![jointbayes](https://latex.codecogs.com/png.latex?%5Clarge%20P%28spam%7Cwords%29%20%3D%20P%28spam%29%5Cprod_%7Bk%7D%5Cfrac%7BP%28words_k%7Cspam%29%7D%7BP%28words_k%29%7D)
+
+## Laplace Smoothing
+What if we are trying to classify an email that has a word in it that we did not find in our training data? We can simply set its frequency to 1 to avoid division by 0 or classifying a message as not spam no matter how 'spammy' it may seem.
